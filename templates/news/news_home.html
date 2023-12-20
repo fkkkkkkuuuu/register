@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% block BMF %}События бирж{% endblock %}
+
+{% block content %}
+    <div class="features">
+    <h1>События бирж</h1>
+
+    {% for el in event %}
+        <div class="alert alert-warning">
+            <h3>{{ el.title }}</h3>
+            <img src="http://127.0.0.1:8000/media/{{el.image}}"  alt="Изображение 1">
+            <p>{{ el.description }}</p>
+            <p>{{ el.genre }}</p>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
+

@@ -19,6 +19,7 @@ class Register(View):
             'form': UserCreationForm(), 'form1': UserRoleForm()
         }
         return render(request, self.template_name, context)
+
     def post(self, request):
         form = UserCreationForm(request.POST)
         form1 = UserRoleForm(request.POST)
@@ -31,9 +32,11 @@ class Register(View):
             password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=password, role=role)
             login(request, user)
-
-
-            return redirect('home')
+            print(role)
+            if role == 'seller':
+                return redirect('home_other')
+            if role == 'customer':
+                return redirect('home')
         context = {
             'form': form,
             'form1': form1

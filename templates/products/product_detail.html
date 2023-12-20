@@ -1,0 +1,15 @@
+
+{% extends 'main/base.html' %}
+
+{% block BMF %}
+    Список Аккаунтов
+{% endblock %}
+
+
+{% block content %}
+    <h2>{{ product.title }}</h2>
+    <p>{{ product.description }}</p>
+    <img src="http://127.0.0.1:8000/media/{{product.image}}" alt="{{ product.title }}">
+    <p>Дата добавления: {{ product.date_added }}</p>
+    <p>Ценник: {{ product.price }}</p>
+{% endblock %}
