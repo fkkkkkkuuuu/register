@@ -34,7 +34,9 @@ INSTALLED_APPS = [
     'register',
     'products',
     'news',
-    'home'
+    'home',
+    'user_main',
+    'task'
 ]
 
 MIDDLEWARE = [
