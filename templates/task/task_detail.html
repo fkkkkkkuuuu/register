@@ -1,0 +1,22 @@
+<!-- task/task_detail.html -->
+
+{% extends 'main/base.html' %}
+
+{% block title %}
+{{ task.title }} Details
+{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header">
+            <h1 class="display-4 fw-normal text-body-emphasis">{{ task.title }} Details</h1>
+        </div>
+        <div class="card-body">
+            <img style="width: 1250px; height: 600px;" src="{{ task.image.url }}" alt="{{ task.title }}">
+            <p>ID: {{ task.id }}</p>
+            <p>Description: {{ task.task_description }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
