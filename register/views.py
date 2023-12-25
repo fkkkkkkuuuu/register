@@ -36,7 +36,7 @@ class Register(View):
             if role == 'seller':
                 return redirect('home_other')
             if role == 'customer':
-                return redirect('home')
+                return redirect('user_main')
         context = {
             'form': form,
             'form1': form1

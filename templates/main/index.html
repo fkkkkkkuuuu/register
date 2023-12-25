@@ -3,10 +3,15 @@
 
 {% block content %}
     <div class="features">
-    <h1>{{ title }}</h1>
-    <p>BMF VERIFY -  лидеры рынка</p>
-    <button href="main/about.html" class="btn btn-warning">About us</button>
+    <h1>BMF Verify</h1>
+
+    {% for el in string_ %}
+        <div>
+            <p>{{ el.description_text }}</p>
+
+        </div>
+    {% endfor %}
     </div>
 {% endblock %}
 
-{% block BMF %}{{ title }}{% endblock %}
+{% block BMF %}{{ context }}{% endblock %}

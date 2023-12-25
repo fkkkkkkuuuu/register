@@ -1,4 +1,4 @@
-{% extends 'main/base.html' %}
+{% extends 'user_main/user_base.html' %}
 
 {% block title %}
 {{ title }}
@@ -23,13 +23,12 @@
                         </div>
                         <div class="card-body">
                             <p>ID: {{ task.id }}</p>
-                            <img style="width: 150px; height: 150px;" src="media/{{ task.image }}" alt="asdfas">
+                            <img style="width: 150px; height: 150px;" src="http://127.0.0.1:8000/media/{{ task.image }}" alt="asdfas">
                             <p>{{ task.task }}</p>
                             <div class="row">
                                 <div class="col-12">
-                                    <a href="{% url 'binance_home' %}" class="btn btn-primary btn-block">Button for {{ task.title }}</a>
-                                    <a href="{% url 'bybit_home' %}" class="btn btn-primary btn-block">Button for {{ task.title }}</a>
-                                    <a href="{% url 'coinbase_home' %}" class="btn btn-primary btn-block">Button for {{ task.title }}</a>
+
+
                                 </div>
                             </div>
                         </div>

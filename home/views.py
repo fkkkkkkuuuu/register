@@ -1,11 +1,12 @@
 from django.shortcuts import render
+from .models import StringRun
 
 
 def index(request):
-    data = {
-        'title': 'Главная страница'
-    }
-    return render(request, 'main/index.html', data)
+
+    string_ = StringRun.objects.all()
+
+    return render(request, 'main/index.html', {'string_': string_})
 
 
 def about(request):
